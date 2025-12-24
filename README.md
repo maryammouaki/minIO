@@ -1,4 +1,4 @@
-# MinIO Demo
+
 
 ## Installation
 
@@ -30,15 +30,9 @@ python test_iam.py
 ```
 
 
-## 🙏 Remerciements
 
-- Équipe MinIO pour la documentation
-- Communauté Docker
-- AWS pour l'API S3 standardisée
 
----
 
-**⭐ Si ce projet vous aide, donnez-lui une étoile sur GitHub !**
 
 [![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=for-the-badge&logo=minio&logoColor=white)](https://min.io/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
@@ -54,13 +48,7 @@ Ce projet est une démonstration technique réalisée dans le cadre des études 
 - ✅ **Conformité** via Object Locking (Legal Hold)
 - ✅ **Résilience** face aux pannes matérielles
 
-## 🎯 Objectifs de la Démonstration
 
-1. Installer MinIO via Docker avec 4 disques simulés
-2. Uploader un dataset réel (addresses.csv) via Python/boto3
-3. Créer un utilisateur IAM avec permissions restreintes (lecture seule)
-4. Activer l'Object Locking sur une facture (conformité RGPD)
-5. Simuler une panne disque et vérifier la continuité du service
 
 ## 📁 Structure du Projet
 
@@ -79,7 +67,7 @@ MINIO/
 └── data1-4/                     # Dossiers créés par Docker (volumes)
 ```
 
-## 🚀 Installation et Démarrage Rapide
+
 
 ### Prérequis
 
@@ -209,34 +197,9 @@ python test_resilience.py
 
 **Résultat:** ✅ Les données sont reconstituées via Erasure Coding!
 
-## 🎬 Création de la Vidéo de Démonstration
 
-### Scripts Fournis
 
-1. **[SCRIPT_VOIX_OFF.md](SCRIPT_VOIX_OFF.md)** - Narration complète (2-3 min)
-2. **[COMMANDES.md](COMMANDES.md)** - Toutes les commandes à exécuter
-3. **[PLAN_MONTAGE.md](PLAN_MONTAGE.md)** - Plan détaillé avec timing
 
-### Séquences Vidéo
-
-| Timing | Séquence | Contenu |
-|--------|----------|---------|
-| 0:00-0:15 | Introduction | Présentation du projet |
-| 0:15-0:45 | Installation | Docker + Erasure Coding |
-| 0:45-1:10 | Upload | Script Python boto3 |
-| 1:10-1:35 | Sécurité | IAM + Politique |
-| 1:35-2:00 | Conformité | Object Locking |
-| 2:00-2:40 | Résilience | Simulation panne |
-| 2:40-3:00 | Conclusion | Récap + GitHub |
-
-### Outils Recommandés
-
-- **Capture:** OBS Studio, Camtasia
-- **Montage:** DaVinci Resolve, Premiere Pro
-- **Résolution:** 1920x1080 (Full HD)
-- **Format:** MP4 (H.264)
-
-## 🧪 Tests et Validation
 
 ### Test Complet
 
@@ -343,27 +306,10 @@ netstat -an | findstr "9001"
 
 Si plus de N/2 disques sont perdus (ex: 3/4 disques), les données ne peuvent pas être reconstruites. C'est le comportement attendu de l'Erasure Coding.
 
-## 🎓 Compétences Démontrées
 
-- ✅ Déploiement d'infrastructure avec Docker
-- ✅ Programmation Python (boto3, API S3)
-- ✅ Gestion de la sécurité (IAM, politiques)
-- ✅ Conformité réglementaire (Object Locking)
-- ✅ Compréhension des systèmes distribués
-- ✅ Tests de résilience et disaster recovery
 
-## 📊 Comparaison MinIO vs AWS S3
 
-| Critère | MinIO | AWS S3 |
-|---------|-------|--------|
-| **Coût** | Gratuit (open-source) | Payant (usage) |
-| **Hébergement** | Local / On-premise | Cloud uniquement |
-| **API** | 100% compatible S3 | Natif S3 |
-| **Erasure Coding** | ✅ EC:2 à EC:16 | ✅ (non configurable) |
-| **Performance** | Très rapide (local) | Dépend de la région |
-| **Sécurité** | IAM, encryption | IAM, encryption |
-| **Conformité** | WORM, Legal Hold | WORM, Glacier Vault Lock |
-| **Complexité** | Moyenne | Faible |
+
 
 
 
