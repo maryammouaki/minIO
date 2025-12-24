@@ -1,0 +1,60 @@
+# .gitignore pour projet MinIO Demo
+
+# Dossiers de données MinIO (créés par Docker)
+data1/
+data2/
+data3/
+data4/
+
+# Fichiers Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Fichiers de test générés
+addresses_recovered.csv
+test.txt
+*.csv
+*.txt
+!requirements.txt
+
+# Fichiers PDF de test
+*.pdf
+
+# MinIO client executable
+mc.exe
+minio.exe
+
+# Fichiers temporaires
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Environnement Python
+.env
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Fichiers Docker locaux
+docker-compose.override.yml
+
+# Certificats SSL (si générés)
+certs/
+*.crt
+*.key
+*.pem
